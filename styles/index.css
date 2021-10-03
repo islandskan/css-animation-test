@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #9186c0;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.card {
+    max-width: 440px;
+    min-height: 500px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+    transition: all 1.5s ease-out;
+    overflow: hidden;
+}
+ 
+/*Trigger*/
+.animate {
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+  }
+
+/*Delays for the cards*/
+.fadeInLeft.animate.caisa {
+    animation-delay: 0.5s;
+} 
+
+.fadeInLeft.animate.magnusson {
+    animation-delay: 1.5s; 
+}
+
+.fadeInLeft.animate.judit {
+    animation-delay: 2.5s; 
+}
+
+.fadeInLeft.animate.anders {
+    animation-delay: 3.5s; 
+}
+
+/*animations start here*/
+
+@-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    mix-blend-mode: hard-light;
+    background-color: #DCD8F2;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 1.5s;
+}
+
+.card:hover {
+    transition: all 1.5s ease-out;
+    transition-delay: 0.5s;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover button {
+    transform: translate(-50%, -50%) scale(20);
+    transition-delay: 0.5s;
+}
+
+/* .card:hover .button:hover .card__text {
+    transform: scale(1);
+    transition: 1s;
+    transition-delay: 0.5s;
+} */
+
+/* .card__text {
+    font-family: 'Amiko';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 32.5px;
+    color: #474554;
+    padding: 10px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 1s;
+} */
+
+
+
+
+
+
+
+
+
